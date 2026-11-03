@@ -2,6 +2,8 @@
 
 ![CI](https://github.com/14Hariom/churn-mlops/actions/workflows/ci.yml/badge.svg)
 
+> **Live demo:** https://churn-mlops-g7bd.onrender.com/docs *(free tier: the first request can take 30-60 seconds to wake up)*
+
 A machine learning project that predicts the **probability that a telecom customer will leave** (churn),
 served through a REST API and tested automatically with GitHub Actions.
 
