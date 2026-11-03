@@ -1,0 +1,7 @@
+# Render "Blueprint": lets Render create the service straight from this repo.
+services:
+  - type: web
+    name: churn-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health

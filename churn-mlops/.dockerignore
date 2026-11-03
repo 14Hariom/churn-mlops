@@ -1,0 +1,17 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.git/
+.github/
+mlruns/
+mlartifacts/
+mlflow.db
+logs/
+reports/
+models/*.pkl
+models/*.csv
+models/*.json
+notebooks/
+tests/
+.pytest_cache/

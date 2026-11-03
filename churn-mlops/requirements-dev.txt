@@ -1,0 +1,7 @@
+# Everything for local development: runtime + tracking + tests
+-r requirements.txt
+mlflow>=2.10
+pytest>=7.4
+httpx>=0.27
+matplotlib>=3.7
+jupyter>=1.0
