@@ -43,9 +43,25 @@ Logistic Regression, Random Forest and XGBoost. The best one (by F1 score) is sa
 
 ## Note about the data
 
-This repo currently uses a synthetic demo dataset with the same columns as the Kaggle
-Telco Customer Churn dataset. Results on demo data are not meaningful.
+The data is the Kaggle Telco Customer Churn dataset (WA_Fn-UseC_-Telco-Customer-Churn.csv), 7,043 customers.
 
 ## Tech stack
 
 Python, pandas, scikit-learn, XGBoost, FastAPI, Pydantic, pytest, GitHub Actions.
+
+
+## Results (real Telco Churn dataset, 7,043 customers)
+
+Evaluated on a 20% held-out test set (1,409 customers).
+
+| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
+|---|---|---|---|---|---|
+| Logistic Regression | 0.738 | 0.504 | 0.783 | 0.614 | 0.842 |
+| **Random Forest (best by F1)** | 0.757 | 0.529 | 0.781 | 0.631 | 0.843 |
+| XGBoost | 0.750 | 0.520 | 0.778 | 0.623 | 0.840 |
+
+**Why F1 and recall, not just accuracy?** About 27% of customers churn, so a model that always predicts
+"no churn" would be about 73% accurate but catch no one. Recall shows how many real churners the model finds.
+
+**Takeaway:** the three models perform very similarly. The simple Logistic Regression baseline is almost as
+good as the tree models, which suggests the signal in this data is fairly simple (contract type, tenure, and so on).
